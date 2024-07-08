@@ -20,3 +20,5 @@ services:
     command: [ "--config", "/app/config.yaml", "--port", "8000", "--num_workers", "8" ]
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /app/application_default_credentials.json
+    env_file:
+      - .env-cloud
