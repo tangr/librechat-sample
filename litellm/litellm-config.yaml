@@ -1,0 +1,20 @@
+proxies:
+  aws_bedrock:
+    type: aws_bedrock
+    endpoint: https://bedrock.us-east-1.amazonaws.com
+    region: us-east-1
+
+model_list:
+  - model_name: claude-3-sonnet
+    litellm_params:
+      model: bedrock/anthropic.claude-3-sonnet-20240229-v1:0
+      aws_region_name: us-east-1
+
+litellm_settings:
+  drop_params: true
+  set_verbose: true
+
+general_settings:
+  use_azure: false
+  use_openai: false
+

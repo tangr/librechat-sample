@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  api:
+    volumes:
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
+
+  litellm:
+    image: ghcr.io/berriai/litellm:main-latest
+    volumes:
+      - ./litellm/litellm-config.yaml:/app/config.yaml
+      # NOTE: For Google - required auth "GOOGLE_APPLICATION_CREDENTIALS" environment and volume mount
+      # This also means you need to add the `application_default_credentials.json` file within ~/litellm
+      - ./litellm/application_default_credentials.json:/app/application_default_credentials.json
+    ports:
+      - "4000:8000"
+    command: ["litellm", "--config", "/app/config.yaml", "--port", "8000", "--num_workers", "8"]
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /app/application_default_credentials.json
