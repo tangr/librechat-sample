@@ -1,5 +1,11 @@
 version: "1"  # 添加 version 字段
 
+registration:
+  socialLogins: ["google", "facebook", "github", "discord", "openid"]
+  allowedDomains:
+    - "gmail.com"
+    - "protonmail.com"
+
 endpoints:
   custom:
     - name: "LiteLLM"
