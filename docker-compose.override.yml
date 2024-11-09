@@ -8,7 +8,7 @@ services:
         target: /app/librechat.yaml
 
   litellm:
-    image: ghcr.io/berriai/litellm:main-v1.52.0-stable
+    image: ghcr.io/berriai/litellm:main-v1.52.3
     volumes:
       - ./litellm/litellm-config.yaml:/app/config.yaml
       # NOTE: For Google - required auth "GOOGLE_APPLICATION_CREDENTIALS" environment and volume mount
