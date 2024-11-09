@@ -17,11 +17,11 @@ endpoints:
       # A "default" model to start new users with. The "fetch" will pull the rest of the available models from LiteLLM
       # More or less this is "irrelevant", you can pick any model. Just pick one you have defined in LiteLLM.
       models:
-        default: ["gpt-3.5-turbo"]
+        default: ["claude-3-5-sonnet-v2"]
         fetch: true
       titleConvo: true
-      titleModel: "gpt-3.5-turbo"
+      titleModel: "claude-3-5-sonnet-v2"
       summarize: false
-      summaryModel: "gpt-3.5-turbo"
+      summaryModel: "claude-3-5-sonnet-v2"
       forcePrompt: false
       modelDisplayLabel: "Lite LLM"
