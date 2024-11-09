@@ -17,11 +17,12 @@ endpoints:
       # A "default" model to start new users with. The "fetch" will pull the rest of the available models from LiteLLM
       # More or less this is "irrelevant", you can pick any model. Just pick one you have defined in LiteLLM.
       models:
-        default: ["claude-3-5-sonnet-v2"]
-        fetch: true
+        default: ["claude-3-5-sonnet-v2", "claude-3-5-haiku"]
+        fetch: false
       titleConvo: true
-      titleModel: "claude-3-5-sonnet-v2"
+      titleModel: "current_model"
+      titleMessageRole: "user"
       summarize: false
-      summaryModel: "claude-3-5-sonnet-v2"
+      summaryModel: "current_model"
       forcePrompt: false
       modelDisplayLabel: "Lite LLM"
