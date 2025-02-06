@@ -37,6 +37,6 @@ endpoints:
         default: ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"]
         fetch: false
       titleConvo: true
-      titleModel: "deepseek-chat"
+      titleModel: "current_model"
       titleMessageRole: "system"
       modelDisplayLabel: "Deepseek"
