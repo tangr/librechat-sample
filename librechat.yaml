@@ -32,7 +32,8 @@ endpoints:
       modelDisplayLabel: "Lite LLM"
     - name: "Deepseek"
       apiKey: "${DEEPSEEK_API_KEY}"
-      baseURL: "https://api.deepseek.com/v1"
+      # baseURL: "https://api.deepseek.com/v1"
+      baseURL: "${DEEPSEEK_API_ENDPOINT}"
       models:
         default: ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"]
         fetch: false
