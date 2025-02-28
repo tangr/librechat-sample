@@ -13,6 +13,7 @@ model_list:
       aws_region_name: "us-west-2"
       aws_access_key_id: "os.environ/llm_AWS_ACCESS_KEY_ID"
       aws_secret_access_key: "os.environ/llm_AWS_SECRET_ACCESS_KEY"
+      thinking: {"type": "enabled", "budget_tokens": 1024}
   - model_name: claude-3-5-sonnet-v2
     litellm_params:
       model: bedrock/us.anthropic.claude-3-5-sonnet-20241022-v2:0
