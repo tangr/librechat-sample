@@ -25,7 +25,7 @@ endpoints:
           - "claude-3-opus"
         fetch: false
       titleConvo: true
-      titleMethod: completion
+      titleMethod: functions
       titleModel: "claude-3-5-sonnet-v2"
       titleMessageRole: "user"
       summarize: false
