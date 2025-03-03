@@ -17,7 +17,7 @@ services:
     ports:
       - "4000:8000"
     # command: ["litellm", "--config", "/app/config.yaml", "--port", "8000", "--num_workers", "8"]
-    command: [ "--config", "/app/config.yaml", "--port", "8000", "--num_workers", "8" ]
+    command: [ "--config", "/app/config.yaml", "--port", "8000", "--num_workers", "4" ]
     environment:
       GOOGLE_APPLICATION_CREDENTIALS: /app/application_default_credentials.json
       LITELLM_LOG: DEBUG
